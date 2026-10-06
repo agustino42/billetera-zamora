@@ -1,0 +1,641 @@
+/* ============================================================================
+   ZAMORA — Sub-proyecto "Proyecto de Grado" Módulos I y II
+   Hoja de estilo para impresión PDF.
+   Formato: Carta (Letter) 8.5 x 11 in
+   Márgenes: superior 2,5 cm · inferior 2,5 cm · izquierdo 4 cm · derecho 2,5 cm
+   Tipografía: Times New Roman 12 pt, interlineado 1,5 (APA 7.ª edición)
+   ========================================================================== */
+
+:root {
+  --c-cm: 0.3937007874;           /* 1 cm en pulgadas */
+  --m-top: 2.5cm;
+  --m-bottom: 2.5cm;
+  --m-left: 4cm;
+  --m-right: 2.5cm;
+
+  --verde:      #0F7A4F;
+  --verde-osc:  #0A5537;
+  --verde-clar: #E7F4ED;
+  --dorado:     #B8860B;
+  --gris:       #4A4A4A;
+  --gris-clar:  #F2F2F2;
+  --borde:      #9AA0A6;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
+  line-height: 1.5;
+  color: #111;
+  background: #fff;
+  text-align: justify;
+  hyphens: none;
+  font-variant-numeric: lining-nums;
+}
+
+/* ---------- Saltos de página ------------------------------------------- */
+.pb        { break-before: page; page-break-before: always; margin: 0 !important; padding: 0; }
+.no-break  { break-inside: avoid; page-break-inside: avoid; }
+
+/* ==========================================================================
+   PARTES PRELIMINARES
+   ========================================================================== */
+
+/* ---- Portada ----------------------------------------------------------- */
+.portada {
+  position: relative;
+  height: 23.2cm;                 /* 11in - 2.5cm - 2.5cm - 1.2cm de holgura */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.portada .banda-sup {
+  border-top: 3.5pt solid var(--verde);
+  border-bottom: 0.8pt solid var(--verde);
+  padding: 7pt 0 6pt 0;
+}
+.portada .banda-sup .unellez {
+  font-size: 11pt;
+  font-weight: bold;
+  letter-spacing: 0.6pt;
+  line-height: 1.35;
+}
+.portada .banda-sup .nombre {
+  font-size: 15pt;
+  font-weight: bold;
+  letter-spacing: 1.4pt;
+  text-transform: uppercase;
+  margin-top: 3pt;
+  color: var(--verde-osc);
+}
+.portada .banda-sup .siglas {
+  display: block;
+  font-size: 10pt;
+  letter-spacing: 2.5pt;
+  margin-top: 2pt;
+  color: var(--gris);
+}
+
+.portada .centro { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+.portada .marca {
+  margin: 0 auto 10pt auto;
+  width: 118px;
+  height: 118px;
+}
+.portada .marca svg { width: 100%; height: 100%; display: block; }
+
+.portada .titulo-proyecto {
+  font-size: 10pt;
+  letter-spacing: 1.6pt;
+  text-transform: uppercase;
+  color: var(--gris);
+  margin-bottom: 6pt;
+}
+.portada .titulo {
+  font-size: 20pt;
+  font-weight: bold;
+  line-height: 1.3;
+  color: var(--verde-osc);
+  margin: 0 0 10pt 0;
+  text-transform: uppercase;
+}
+.portada .subtitulo {
+  font-size: 12.5pt;
+  font-style: italic;
+  color: var(--gris);
+  margin: 0 auto;
+  max-width: 14.5cm;
+  line-height: 1.45;
+}
+.portada .linea-fina {
+  width: 6.5cm;
+  margin: 12pt auto;
+  border: 0;
+  border-top: 0.8pt solid var(--borde);
+}
+
+.portada .banda-inf {
+  border-top: 0.8pt solid var(--verde);
+  padding-top: 8pt;
+  font-size: 11pt;
+  line-height: 1.6;
+}
+.portada .banda-inf .linea { margin: 0; }
+.portada .banda-inf .rotulo {
+  font-size: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 0.8pt;
+  color: var(--gris);
+}
+.portada .banda-inf .valor { font-weight: bold; }
+.portada .banda-inf .tabla-mini {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 4pt;
+}
+.portada .banda-inf .tabla-mini td {
+  border: 0;
+  padding: 1pt 4pt;
+  text-align: center;
+  font-size: 11pt;
+}
+.portada .banda-inf .tabla-mini td.rot { font-size: 8.5pt; letter-spacing: 0.7pt; color: var(--gris); text-transform: uppercase; }
+
+/* ---- Hojas de texto enlistadas ---------------------------------------- */
+.hoja-titulo {
+  text-align: center;
+  padding-top: 4.5cm;
+  padding-bottom: 2.5cm;
+}
+.hoja-titulo h1 {
+  font-size: 14pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.8pt;
+  margin: 0;
+  line-height: 1.5;
+}
+.hoja-titulo .linea-fina { width: 7cm; margin: 14pt auto 0 auto; border: 0; border-top: 0.8pt solid var(--borde); }
+
+/* ---- Dedicatoria / Agradecimientos ------------------------------------ */
+.texto-centrado {
+  padding-top: 3.5cm;
+  text-align: center;
+}
+.texto-centrado p {
+  text-align: center;
+  font-size: 12pt;
+  line-height: 1.7;
+  margin: 0 0 10pt 0;
+}
+.texto-centrado .firma { margin-top: 2.2cm; font-style: italic; }
+.texto-centrado .lugfecha { margin-top: 3cm; font-size: 11pt; }
+
+/* ==========================================================================
+   RESUMEN
+   ========================================================================== */
+.resumen { padding-top: 1cm; }
+.resumen h1 {
+  font-size: 14pt;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  margin: 0 0 4pt 0;
+}
+.resumen .sub {
+  text-align: center;
+  font-size: 10pt;
+  color: var(--gris);
+  text-transform: uppercase;
+  letter-spacing: 0.7pt;
+  margin: 0 0 14pt 0;
+}
+.resumen .clave {
+  border: 0.8pt solid var(--borde);
+  background: var(--gris-clar);
+  padding: 7pt 9pt;
+  margin: 12pt 0;
+  font-size: 10.5pt;
+  line-height: 1.45;
+  text-align: justify;
+}
+.resumen .clave b { color: var(--verde-osc); }
+
+/* ==========================================================================
+   ÍNDICES
+   ========================================================================== */
+.indice { padding-top: 1cm; }
+.indice h1 {
+  font-size: 14pt;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  margin: 0 0 16pt 0;
+}
+.indice .bloque { margin-bottom: 22pt; }
+.indice .bloque > h2 {
+  font-size: 11.5pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.7pt;
+  color: var(--verde-osc);
+  border-bottom: 0.8pt solid var(--verde);
+  padding-bottom: 3pt;
+  margin: 0 0 7pt 0;
+}
+
+.toc-linea {
+  display: flex;
+  align-items: baseline;
+  font-size: 11pt;
+  line-height: 1.42;
+  margin: 0 0 2.5pt 0;
+  text-align: left;
+}
+.toc-linea .txt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.toc-linea .dots {
+  flex: 1 1 auto;
+  min-width: 12pt;
+  border-bottom: 0.6pt dotted var(--gris);
+  margin: 0 4pt;
+  position: relative;
+  top: -3pt;
+}
+.toc-linea .pg { flex: 0 0 auto; text-align: right; font-variant-numeric: tabular-nums; }
+
+.toc-linea.n1 { font-weight: bold; font-size: 11pt; margin-top: 9pt; text-transform: uppercase; letter-spacing: 0.3pt; }
+.toc-linea.n2 { padding-left: 14pt; }
+.toc-linea.n3 { padding-left: 30pt; font-size: 10.5pt; color: #333; }
+.toc-linea.sin-num .pg { display: none; }
+
+/* ==========================================================================
+   ESTRUCTURA DE CAPÍTULOS
+   ========================================================================== */
+.capitulo { padding-top: 1.2cm; }
+
+.capitulo > .rotulo-cap {
+  text-align: center;
+  font-size: 11pt;
+  font-weight: bold;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+  color: var(--verde-osc);
+  margin: 0 0 4pt 0;
+}
+.capitulo > .titulo-cap {
+  text-align: center;
+  font-size: 17pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.28;
+  margin: 0 0 6pt 0;
+  color: #000;
+}
+.capitulo > .subtitulo-cap {
+  text-align: center;
+  font-size: 11.5pt;
+  font-style: italic;
+  color: var(--gris);
+  margin: 0 0 10pt 0;
+}
+.capitulo > .regla-cap {
+  border: 0;
+  border-top: 1.6pt solid var(--verde);
+  width: 4.5cm;
+  margin: 0 auto 16pt auto;
+}
+
+/* ---- Secciones y subsecciones ----------------------------------------- */
+h2.sec {
+  font-size: 13pt;
+  font-weight: bold;
+  text-align: left;
+  margin: 18pt 0 7pt 0;
+  color: #000;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+h3.sub {
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: left;
+  margin: 13pt 0 5pt 0;
+  color: #000;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+h4.ssub {
+  font-size: 12pt;
+  font-weight: bold;
+  font-style: italic;
+  text-align: left;
+  margin: 11pt 0 4pt 0;
+  color: #222;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+h2.sec .num, h3.sub .num, h4.ssub .num { color: var(--verde-osc); }
+
+p { margin: 0 0 6pt 0; text-align: justify; }
+p.centrado { text-align: center; }
+p.sangria { text-indent: 1.25cm; }
+
+ul, ol { margin: 0 0 7pt 0; padding-left: 1.1cm; }
+li { margin-bottom: 3pt; text-align: justify; }
+ul.vineta { list-style-type: disc; }
+ol.num-lista { list-style-type: decimal; }
+
+.viñeta-cheque { list-style: none; padding-left: 0.9cm; }
+.viñeta-cheque li { position: relative; margin-bottom: 5pt; }
+.viñeta-cheque li::before {
+  content: "\2713";
+  position: absolute;
+  left: -0.9cm;
+  top: 0;
+  color: var(--verde);
+  font-weight: bold;
+  font-family: "Segoe UI Symbol", "Segoe UI", sans-serif;
+  font-size: 11pt;
+}
+
+/* ---- Cajas / destacados ----------------------------------------------- */
+.caja {
+  border-left: 2.6pt solid var(--verde);
+  background: var(--verde-clar);
+  padding: 7pt 10pt;
+  margin: 9pt 0;
+  font-size: 11pt;
+  line-height: 1.45;
+}
+.caja .titulo-caja {
+  font-weight: bold;
+  color: var(--verde-osc);
+  display: block;
+  margin-bottom: 3pt;
+  font-size: 10.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.6pt;
+}
+.caja.neutra { border-left-color: var(--gris); background: var(--gris-clar); }
+.caja.neutra .titulo-caja { color: var(--gris); }
+.caja.alerta { border-left-color: #B3261E; background: #FCEDEC; }
+.caja.alerta .titulo-caja { color: #B3261E; }
+
+blockquote {
+  margin: 9pt 1cm;
+  padding-left: 10pt;
+  border-left: 1.6pt solid var(--borde);
+  font-style: italic;
+  font-size: 11pt;
+  color: #333;
+}
+
+/* ==========================================================================
+   TABLAS  (APA 7.ª)
+   ========================================================================== */
+.cuadro { margin: 11pt 0 13pt 0; break-inside: avoid; page-break-inside: avoid; }
+.cuadro .rotulo {
+  font-size: 10.5pt;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 4pt;
+  color: #000;
+}
+.cuadro .rotulo .etq { color: var(--verde-osc); }
+.cuadro .fuente-nota {
+  font-size: 9pt;
+  color: var(--gris);
+  margin-top: 3pt;
+  text-align: left;
+  line-height: 1.35;
+}
+.cuadro .fuente-nota b { font-weight: bold; }
+
+table.datos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10pt;
+  line-height: 1.32;
+}
+table.datos caption { caption-side: top; }
+table.datos th,
+table.datos td {
+  border: 0.5pt solid var(--borde);
+  padding: 3.2pt 4.5pt;
+  text-align: left;
+  vertical-align: top;
+}
+table.datos thead th {
+  background: var(--verde-clar);
+  font-weight: bold;
+  text-align: center;
+  border-top: 1.2pt solid var(--verde);
+  border-bottom: 0.9pt solid var(--verde);
+}
+table.datos tbody tr:nth-child(even) { background: #FAFAFA; }
+table.datos .c { text-align: center; }
+table.datos .num { text-align: right; font-variant-numeric: tabular-nums; }
+table.datos tfoot td {
+  background: var(--gris-clar);
+  font-weight: bold;
+  border-top: 0.9pt solid var(--verde);
+}
+table.datos.compacta { font-size: 9.2pt; line-height: 1.25; }
+table.datos.compacta th, table.datos.compacta td { padding: 2.4pt 3.6pt; }
+
+/* ==========================================================================
+   FIGURAS / DIAGRAMAS
+   ========================================================================== */
+.figura {
+  margin: 12pt 0 14pt 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  text-align: center;
+}
+.figura .lienzo {
+  border: 0.5pt solid var(--borde);
+  background: #FCFCFD;
+  padding: 10pt;
+}
+.figura .rotulo {
+  font-size: 10.5pt;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 5pt;
+  color: #000;
+}
+.figura .rotulo .etq { color: var(--verde-osc); }
+.figura .pie {
+  font-size: 9pt;
+  color: var(--gris);
+  text-align: left;
+  margin-top: 4pt;
+  line-height: 1.35;
+}
+
+/* ---- Diagrama por capas (capas apiladas) -------------------------------- */
+.capas { display: flex; flex-direction: column; gap: 4pt; }
+.capa {
+  border: 0.8pt solid var(--verde);
+  background: var(--verde-clar);
+  border-radius: 2pt;
+  padding: 5pt 8pt;
+  text-align: center;
+}
+.capa .capa-nom {
+  font-size: 10.5pt;
+  font-weight: bold;
+  color: var(--verde-osc);
+  display: block;
+}
+.capa .capa-items { font-size: 9.2pt; color: #333; display: block; margin-top: 1.5pt; line-height: 1.3; }
+.capa.alt { border-color: #8A6D1F; background: #FBF4E0; }
+.capa.alt .capa-nom { color: #7A5F17; }
+.capa.neutral { border-color: var(--borde); background: var(--gris-clar); }
+.capa.neutral .capa-nom { color: var(--gris); }
+
+/* ---- Diagrama de flujo (mermaid-like con CSS) --------------------------- */
+.flujo { text-align: center; }
+.flujo .nodo {
+  display: inline-block;
+  border: 0.8pt solid var(--verde);
+  background: #fff;
+  border-radius: 2pt;
+  padding: 4pt 9pt;
+  font-size: 9.5pt;
+  line-height: 1.28;
+  margin: 0;
+  vertical-align: top;
+}
+.flujo .nodo .t { font-weight: bold; display: block; color: var(--verde-osc); }
+.flujo .fila { margin: 0 0 3pt 0; }
+.flujo .flecha {
+  font-size: 11pt;
+  color: var(--verde);
+  line-height: 1;
+  margin: 1pt 0;
+  font-family: "Segoe UI Symbol", "Segoe UI", sans-serif;
+}
+.flujo .decision {
+  border-color: var(--dorado);
+  background: #FDF8EA;
+  border-radius: 0;
+  font-style: italic;
+}
+.flujo .decision .t { color: #7A5F17; }
+
+/* ---- Diagrama de módulos (3 columnas) ---------------------------------- */
+.modulos { display: flex; gap: 7pt; }
+.modulos .mod {
+  flex: 1;
+  border: 0.8pt solid var(--verde);
+  border-top: 3pt solid var(--verde);
+  border-radius: 2pt;
+  overflow: hidden;
+}
+.modulos .mod .cab {
+  background: var(--verde-clar);
+  padding: 5pt 6pt;
+  text-align: center;
+}
+.modulos .mod .cab .n { font-size: 11pt; font-weight: bold; color: var(--verde-osc); display: block; }
+.modulos .mod .cab .d { font-size: 8.6pt; color: var(--gris); display: block; line-height: 1.25; }
+.modulos .mod ul { margin: 0; padding: 6pt 6pt 6pt 15pt; font-size: 9pt; line-height: 1.32; }
+.modulos .mod li { margin-bottom: 2.5pt; }
+
+/* ---- Listado de endpoints / código ------------------------------------ */
+pre.codigo {
+  font-family: "JetBrains Mono", "Consolas", "Courier New", monospace;
+  font-size: 8.4pt;
+  line-height: 1.35;
+  background: #F7F8F9;
+  border: 0.5pt solid var(--borde);
+  border-left: 2.4pt solid var(--verde);
+  padding: 6pt 8pt;
+  margin: 7pt 0;
+  white-space: pre-wrap;
+  text-align: left;
+  color: #1A1A1A;
+  break-inside: avoid;
+}
+code.enlinea {
+  font-family: "JetBrains Mono", "Consolas", "Courier New", monospace;
+  font-size: 9.5pt;
+  background: #F0F1F3;
+  padding: 0.5pt 2.5pt;
+  border-radius: 2pt;
+  color: #0A5537;
+}
+
+/* ==========================================================================
+   REFERENCIAS (APA 7.ª — sangría francesa)
+   ========================================================================== */
+.referencias h1 {
+  font-size: 14pt;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  margin: 0 0 16pt 0;
+}
+.ref-item {
+  padding-left: 1.25cm;
+  text-indent: -1.25cm;
+  margin-bottom: 7pt;
+  font-size: 11pt;
+  line-height: 1.42;
+  text-align: left;
+}
+.ref-item i { font-style: italic; }
+.ref-item .obra { font-style: italic; }
+
+/* ==========================================================================
+   ANEXOS
+   ========================================================================== */
+.anexo > h1 {
+  font-size: 14pt;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.8pt;
+  margin: 0 0 14pt 0;
+}
+.anexo h2 {
+  font-size: 12.5pt;
+  font-weight: bold;
+  margin: 16pt 0 6pt 0;
+  color: var(--verde-osc);
+  break-after: avoid;
+}
+.anexo h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  margin: 12pt 0 5pt 0;
+  break-after: avoid;
+}
+.hoja-firma { margin-top: 2.6cm; }
+.linea-firma {
+  border-top: 0.6pt solid #000;
+  width: 7.5cm;
+  margin: 0 auto 3pt auto;
+}
+.firma-bajo {
+  text-align: center;
+  font-size: 10.5pt;
+  line-height: 1.35;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   UTILIDADES
+   ========================================================================== */
+.mt0 { margin-top: 0; }
+.mt6 { margin-top: 6pt; }
+.mt12 { margin-top: 12pt; }
+.mb0 { margin-bottom: 0; }
+.sin-borde { border: 0 !important; }
+.nota-pie {
+  font-size: 9pt;
+  color: var(--gris);
+  line-height: 1.35;
+  margin-top: 6pt;
+}
+.destacado-verde { color: var(--verde-osc); font-weight: bold; }
+.kbd {
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 9pt;
+  border: 0.5pt solid var(--borde);
+  border-bottom-width: 1.4pt;
+  border-radius: 3pt;
+  padding: 0.5pt 3pt;
+  background: #FAFAFA;
+}

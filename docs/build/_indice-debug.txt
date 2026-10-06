@@ -1,0 +1,45 @@
+ 13  [1] general  INTRODUCCIÓN
+ 15  [1] general  CAPÍTULO I: EL PROBLEMA
+ 15  [2] general  1.1. Planteamiento del problema
+ 15  [3] general  1.1.1. Contexto general
+ 15  [3] general  1.1.2. Situación observada
+ 16  [2] cuadros  Cuadro 1.1. Situación observada según el actor involucrado
+ 16  [3] general  1.1.3. Problema central
+ 17  [2] figuras  Figura 1.1. Árbol de problemas del sub-proyecto
+ 17  [3] general  1.1.4. Formulación del problema
+ 18  [2] general  1.2. Objetivos
+ 18  [3] general  1.2.1. Objetivo general
+ 18  [3] general  1.2.2. Objetivos específicos
+ 18  [2] cuadros  Cuadro 1.2. Objetivos específicos del sub-proyecto
+ 19  [2] general  1.3. Justificación
+ 19  [3] general  1.3.1. Justificación teórica
+ 19  [3] general  1.3.2. Justificación práctica
+ 20  [3] general  1.3.3. Justificación metodológica
+ 20  [3] general  1.3.4. Justificación institucional y social
+ 20  [2] general  1.4. Alcance y limitaciones
+ 20  [3] general  1.4.1. Alcance
+ 20  [2] cuadros  Cuadro 1.3. Delimitación del alcance del sub-proyecto
+ 21  [3] general  1.4.2. Limitaciones
+ 21  [2] general  1.5. Naturaleza del sub-proyecto y contenido de los módulos
+ 22  [2] cuadros  Cuadro 1.4. Correspondencia entre los módulos del programa y los capítulos del documento
+ 22  [3] general  1.5.1. Módulo I — Momento diagnóstico
+ 22  [3] general  1.5.2. Módulo II — Momento referencial y de planificación
+ 22  [2] general  1.6. Entregables esperados
+ 22  [2] cuadros  Cuadro 1.5. Productos entregables del sub-proyecto
+ 24  [1] general  CAPÍTULO II: MARCO TEÓRICO REFERENCIAL
+ 24  [2] general  2.1. Antecedentes de la investigación
+ 24  [3] general  2.1.1. Antecedentes internacionales
+ 25  [2] cuadros  Cuadro 2.1. Antecedentes de la investigación y su aporte al diseño
+ 26  [3] general  2.1.2. Antecedentes nacionales
+ 26  [3] general  2.1.3. Antecedentes institucionales
+ 27  [2] general  2.7. Glosario
+ 28  [1] general  CAPÍTULO III: MÉTODOS Y TÉCNICAS
+ 28  [2] general  3.1. Enfoque y alcance de la investigación
+ 28  [2] general  3.2. Población y muestra
+ 28  [2] general  3.3. Técnicas e instrumentos de recolección de información
+ 28  [2] general  3.4. Arquitectura y módulos del proyecto
+ 29  [2] general  3.5. Requisitos funcionales y no funcionales
+ 29  [2] general  3.6. Modelo de datos y seguridad
+ 29  [2] general  3.7. Pruebas y validación
+ 29  [2] general  3.8. Consideraciones éticas
+ 29  [2] general  3.9. Conclusión del capítulo

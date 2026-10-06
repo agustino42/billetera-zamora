@@ -1,0 +1,220 @@
+<!-- ======================================================================
+     03-A — CAPÍTULO II: MARCO TEÓRICO REFERENCIAL (apertura y 2.1)
+     ====================================================================== -->
+
+<section class="capitulo pb" data-break="page"
+         data-toc="cap2" data-level="1" data-list="general" data-text="CAPÍTULO II: MARCO TEÓRICO REFERENCIAL">
+  <div class="rotulo-cap">Capítulo II</div>
+  <h1 class="titulo-cap">Marco teórico referencial</h1>
+  <hr class="regla-cap">
+
+  <p>
+    El capítulo que se desarrolla a continuación cumple la función de fundamento conceptual
+    del sub-proyecto. Su propósito no es acumular citas, sino mostrar de dónde provienen las
+    decisiones de diseño de ZAMORA y por qué esas decisiones son coherentes con la evidencia
+    disponible y con la realidad institucional analizada en el Capítulo I. Para alcanzarlo, el
+    marco se organiza en cinco movimientos: el estudio de los antecedentes que han intentado
+    resolver problemas semejantes; la reseña histórica de la institución donde la propuesta se
+    aplica; la delimitación de las bases teóricas que explican el comportamiento del estudiante
+    y del docente; la exposición de las bases legales que regulan el tratamiento de los datos
+    personales del colectivo estudiantil; y la definición del glosario operativo que hace
+    unívoco el uso de los términos técnicos en el resto del documento.
+  </p>
+
+  <!-- ===================== 2.1 ANTECEDENTES ============================= -->
+  <h2 class="sec" data-toc="c2-1" data-level="2" data-list="general"
+      data-text="2.1. Antecedentes de la investigación"><span class="num">2.1.</span> Antecedentes de la investigación</h2>
+
+  <p>
+    La revisión de antecedentes se realizó en bases de datos indexadas y en repositorios
+    institucionales, utilizando como descriptores los términos <i>reconocimiento del desempeño
+    estudiantil</i>, <i>monedas virtuales educativas</i>, <i>gamificación en educación
+    superior</i>, <i>registro académico auditable</i> y <i>aplicación web progresiva</i>. La
+    búsqueda se limitó a trabajos que presentan de forma explícita una regla de conversión
+    entre el desempeño verificado y la recompensa otorgada, ya que ese es el elemento que
+    distingue a los mecanismos analizados de los simples mecanismos de recompensa de uso
+    comercial.
+  </p>
+
+  <h3 class="sub" data-toc="c2-1-1" data-level="3" data-list="general"
+      data-text="2.1.1. Antecedentes internacionales"><span class="num">2.1.1.</span> Antecedentes internacionales</h3>
+
+  <p>
+    La literatura internacional puede agruparse en cuatro familias. La primera corresponde a los
+    sistemas de <b>moneda de clase</b>, es decir, esquemas en los que el desempeño del estudiante
+    se convierte en unidades intercambiables por beneficios. En esta familia, el antecedente
+    más citado es el trabajo de Andrade y Duell, quienes analizaron el efecto de los premios
+    sobre la motivación y concluyeron que el impacto es positivo pero de magnitud pequeña, y
+    que se desploma cuando el incentivo se percibe como un soborno por cumplir. Este hallazgo
+    es determinante para el diseño de ZAMORA: la recompensa no puede ser el objeto perseguido,
+    sino la señal visible de un proceso que ya tiene valor para el estudiante.
+  </p>
+
+  <p>
+    La segunda familia es la de la <b>gamificación en contextos educativos</b>. El metaanálisis
+    de Sailer y Homner evalúa treinta y ocho estudios y encuentra efectos pequeños a moderados
+    sobre el compromiso y la motivación, con un efecto más débil sobre el rendimiento académico.
+    Una revisión sistemática reciente, publicada por Camacho y otros autores, llega a una
+    conclusión equivalente al analizar treinta estudios sobre gamificación en la evaluación
+    universitaria: los elementos de juego transforman la evaluación en un proceso más
+    formativo, pero la sostenibilidad del efecto depende de la calidad del diseño y de la
+    formación docente, no de la simple incorporación de mecánicas.
+  </p>
+
+  <p>
+    La tercera familia estudia la <b>economía de tokens</b> dentro de la organización del aula,
+    entendida como un sistema de reglas que convierte conductas observables en créditos
+    intercambiables y controla su emisión mediante penalizaciones aplicadas con más severidad
+    que los premios. De esa tradición proviene una advertencia que la propuesta asume
+    íntegramente: la emisión sin techo devalúa la moneda y destruye el efecto motivacional
+    mucho antes de que el sistema naufrague.
+  </p>
+
+  <p>
+    La cuarta familia corresponde a la <b>tecnología de credenciales verificables</b>. Desde
+    2015 se multiplican los sistemas que persiguen el registro de logros insustituibles. El
+    análisis de Pilkington sobre las tecnologías de consenso señala que los mecanismos de
+    consenso distribuido tienen sentido cuando la escritura y la verificación corresponden a
+    actores distintos y confiables; cuando existe una única autoridad central que escribe y
+    verifica, la comprobación se resuelve en el servidor y el sellado criptográfico solo añade
+    costo. Esa observación explica la decisión de ZAMORA de no emplear una cadena de bloques
+    pública.
+  </p>
+
+  <div class="cuadro" data-toc="c2-cuadro-1" data-list="cuadros"
+       data-text="Cuadro 2.1. Antecedentes de la investigación y su aporte al diseño">
+    <div class="rotulo"><span class="etq">Cuadro 2.1.</span> Antecedentes de la investigación y su aporte al diseño</div>
+    <table class="datos compacta">
+      <thead>
+        <tr>
+          <th style="width:19%">Fuente</th>
+          <th style="width:25%">Aporte central</th>
+          <th style="width:30%">Hallazgo principal</th>
+          <th style="width:26%">Uso en ZAMORA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Andrade y Duell (2016)</td>
+          <td>Metaanálisis sobre premios y motivación</td>
+          <td>El efecto es pequeño y se reduce cuando el premio se percibe como soborno.</td>
+          <td>El ZAM se obtiene por desempeño sostenido, no por acciones triviales.</td>
+        </tr>
+        <tr>
+          <td>Sailer y Homner (2020)</td>
+          <td>Metaanálisis de la gamificación en aprendizaje</td>
+          <td>Efectos pequeños a moderados en motivación; débiles en rendimiento.</td>
+          <td>El componente lúdico no sustituye al registro verificable.</td>
+        </tr>
+        <tr>
+          <td>Camacho y otros (2026)</td>
+          <td>Revisión sistemática sobre gamificación en la evaluación</td>
+          <td>La sostenibilidad depende del diseño de la experiencia y de la formación docente.</td>
+          <td>Orienta la formación docente y la moderación de la comunidad.</td>
+        </tr>
+        <tr>
+          <td>Skinner (1938)</td>
+          <td>Teoría operante y programación del refuerzo</td>
+          <td>Las consecuencias que siguen a una conducta determinan su frecuencia futura.</td>
+          <td>Sustenta el motor de saldos y la inmediatez de la señal.</td>
+        </tr>
+        <tr>
+          <td>Bandura (1997)</td>
+          <td>Autoeficacia</td>
+          <td>La confianza en la propia capacidad se alimenta de historias de éxito verificable.</td>
+          <td>Explica la importancia de mostrar el progreso acumulado.</td>
+        </tr>
+        <tr>
+          <td>Pilkington (2018)</td>
+          <td>Tecnologías de consenso y credenciales</td>
+          <td>El consenso distribuido solo aporta valor con múltiples autores y verificadores.</td>
+          <td>Fundamenta el rechazo de la cadena de bloques pública.</td>
+        </tr>
+        <tr>
+          <td>Cross (2002)</td>
+          <td>Origen del término blockchain</td>
+          <td>Describe los límites de los registros distribuidos en entornos centralizados.</td>
+          <td>Complementa el argumento con una perspectiva histórica.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="fuente-nota"><b>Nota.</b> Elaboración propia a partir de los trabajos citados en las
+      referencias bibliográficas de este documento.</div>
+  </div>
+
+  <h3 class="sub" data-toc="c2-1-2" data-level="3" data-list="general"
+      data-text="2.1.2. Antecedentes nacionales"><span class="num">2.1.2.</span> Antecedentes nacionales</h3>
+
+  <p>
+    En Venezuela los antecedentes sobre el tema son escasos y se concentran en dos líneas. La
+    primera corresponde a trabajos descriptivos que intentan caracterizar la <b>calidad y la
+    permanencia</b> de la educación superior. Estos estudios coinciden en diagnosticar la
+    debilidad de los indicadores: predominan las mediciones puntuales, se carece de series
+    históricas que permitan distinguir entre una caída del rendimiento y un cambio en la
+    composición de la matrícula, y muy pocas veces se contrastan variables que el estudiante
+    pueda controlar desde su propio esfuerzo.
+  </p>
+
+  <p>
+    La segunda línea reúne los trabajos sobre <b>entornos virtuales de aprendizaje</b>
+    desarrollados en las universidades. Estos aportes son valiosos porque
+    documentan la migración de la matrícula, la asistencia y la evaluación a entornos
+    virtuales, pero resuelven un problema distinto al que plantea ZAMORA: administran
+    <i>la información del proceso</i>, no <i>el reconocimiento del desempeño</i>. En la
+    práctica institucional se observa un vacío persistente: ninguna de estas
+    soluciones integra un registro verificable de los aportes y las
+    calificaciones, y la administración no suele publicar reglas de conversión
+    que el estudiante pueda anticipar y auditar por sí mismo.
+  </p>
+
+  <p>
+    De la revisión nacional se deriva una conclusión que orienta directamente la propuesta:
+    el vacío no está en la ausencia de herramientas digitales, sino en la ausencia de una
+    <b>regla de reconocimiento explícita, verificable y auditable por el estudiante</b>.
+    ZAMORA responde a ese vacío y no a una digitalización genérica de trámites
+    administrativos preexistentes. Esta precisión importa porque distingue la
+    contribución teórica del proyecto de la mera informatización de los procesos
+    administrativos preexistentes.
+  </p>
+
+  <h3 class="sub" data-toc="c2-1-3" data-level="3" data-list="general"
+      data-text="2.1.3. Antecedentes institucionales"><span class="num">2.1.3.</span> Antecedentes institucionales</h3>
+
+  <p>
+    Dentro de la Universidad Nacional Experimental de los Llanos Occidentales
+    “Ezequiel Zamora” se revisaron las experiencias institucionales relacionadas con el
+    registro del desempeño estudiantil. El resultado de esta búsqueda es igualmente
+    revelador: las acciones desarrolladas se limitan a <b>boletines y certificados</b>
+    que traducen el estado académico a un formato legible, y a <b>planes de estímulo</b>
+    de carácter eventual y discrecional.
+  </p>
+
+  <p>
+    Ninguna de esas experiencias establece un registro continuo que permita reconstruir el
+    desempeño del estudiante a lo largo del período académico, ni fija una regla pública
+    de conversión entre el esfuerzo demostrado y el incentivo recibido. El estudiante
+    percibe que el reconocimiento depende de la valoración subjetiva de una autoridad y
+    no de un criterio verificable. Esta es la limitación que el Capítulo I describe y
+    que el presente capítulo explica desde el punto de vista teórico.
+  </p>
+</section>
+
+<!-- ====================== 2.7 GLOSARIO ================================== -->
+<section class="capitulo pb"
+         data-toc="c2-7" data-level="2" data-list="general"
+         data-text="2.7. Glosario">
+  <h2 class="sec"><span class="num">2.7.</span> Glosario</h2>
+
+  <p>
+    A continuación se definen los términos más utilizados en el presente documento:
+  </p>
+
+  <ul class="vineta">
+    <li><b>ZAM:</b> Saldo canjeable obtenido por el desempeño curricular verificado.</li>
+    <li><b>SEM:</b> Saldo no canjeable utilizado para el cálculo del saldo ZAM según la regla definida.</li>
+    <li><b>Registro append-only:</b> Registro de auditoría que solo permite añadir entradas, sin modificación ni eliminación.</li>
+    <li><b>RLS (Row-Level Security):</b> Mecanismo de control de acceso que restringe las filas visibles a cada usuario.</li>
+    <li><b>Reputación docente:</b> Indicador multidimensional (Visibilidad, Puntualidad, Cobertura, Continuidad, Disponibilidad) asociado a la labor docente.</li>
+    <li><b>Comunidad cerrada:</b> Espacio de interacción restringido a usuarios acreditados, con moderación activa.</li>
+  </ul>
+</section>

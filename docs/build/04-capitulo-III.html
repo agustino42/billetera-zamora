@@ -1,0 +1,130 @@
+<!-- ======================================================================
+      04 — CAPÍTULO III: MÉTODOS Y TÉCNICAS (propuesto)
+      ====================================================================== -->
+<section class="capitulo pb" data-break="page"
+         data-toc="cap3" data-level="1" data-list="general"
+         data-text="CAPÍTULO III: MÉTODOS Y TÉCNICAS">
+  <div class="rotulo-cap">Capítulo III</div>
+  <h1 class="titulo-cap">Métodos y técnicas</h1>
+  <hr class="regla-cap">
+
+  <p>
+    El presente capítulo describe el enfoque metodológico, el alcance, la población,
+    las técnicas de recolección de información, el diseño arquitectónico y la
+    estrategia de validación del proyecto ZAMORA. Se sigue el esquema propio de un
+    proyecto factible, con alcance descriptivo y enfoque mixto.
+  </p>
+
+  <h2 class="sec" data-toc="c3-1" data-level="2" data-list="general"
+      data-text="3.1. Enfoque y alcance de la investigación">
+    <span class="num">3.1.</span> Enfoque y alcance de la investigación
+  </h2>
+
+  <p>
+    El estudio adopta un enfoque mixto (cuantitativo y cualitativo), con carácter
+    descriptivo y propositivo. Su alcance se circunscribe a los módulos I y II,
+    correspondientes al diseño y la especificación del mecanismo de registro y
+    reconocimiento verificable del desempeño estudiantil en la Universidad Nacional
+    Experimental de los Llanos Occidentales “Ezequiel Zamora”.
+  </p>
+
+  <h2 class="sec" data-toc="c3-2" data-level="2" data-list="general"
+      data-text="3.2. Población y muestra">
+    <span class="num">3.2.</span> Población y muestra
+  </h2>
+
+  <p>
+    La población objeto de estudio está conformada por estudiantes, docentes y personal
+    administrativo de la UNELLEZ. Para los fines del presente sub-proyecto se emplean
+    técnicas de muestreo no probabilístico por conveniencia, orientadas a obtener
+    información relevante para el diagnóstico y la validación del diseño propuesto.
+  </p>
+
+  <h2 class="sec" data-toc="c3-3" data-level="2" data-list="general"
+      data-text="3.3. Técnicas e instrumentos de recolección de información">
+    <span class="num">3.3.</span> Técnicas e instrumentos de recolección de información
+  </h2>
+
+  <p>
+    Se utilizaron las siguientes técnicas: revisión documental, encuesta estructurada,
+    entrevista semiestructurada y análisis de requisitos. Cada instrumento se diseñó
+    para sustentar las decisiones de diseño expuestas en los capítulos precedentes.
+  </p>
+
+  <h2 class="sec" data-toc="c3-4" data-level="2" data-list="general"
+      data-text="3.4. Arquitectura y módulos del proyecto">
+    <span class="num">3.4.</span> Arquitectura y módulos del proyecto
+  </h2>
+
+  <p>
+    ZAMORA se estructura en tres portales diferenciados por permisos: estudiante,
+    profesor y administración. El mecanismo opera sobre una única base de datos con
+    seguridad a nivel de fila. La regla de conversión entre el desempeño verificado y
+    los saldos se mantiene explícita, pública y verificable, diferenciando entre saldos
+    <i>ZAM</i> (canjeables) y <i>SEM</i> (no canjeables), conforme a lo establecido en
+    la especificación del proyecto.
+  </p>
+
+  <h2 class="sec" data-toc="c3-5" data-level="2" data-list="general"
+      data-text="3.5. Requisitos funcionales y no funcionales">
+    <span class="num">3.5.</span> Requisitos funcionales y no funcionales
+  </h2>
+
+  <p>
+    Entre los requisitos no funcionales destacan: tolerancia a la conectividad
+    intermitente, integridad de los registros mediante trazabilidad criptográfica,
+    protección de datos personales, seguridad por privilegio mínimo, disponibilidad en
+    infraestructura de costo cero y capacidad para operar como aplicación instalable.
+    Los requisitos funcionales se orientan a garantizar el registro verificable, el
+    control de canjes y la auditoría de cada operación.
+  </p>
+
+  <h2 class="sec" data-toc="c3-6" data-level="2" data-list="general"
+      data-text="3.6. Modelo de datos y seguridad">
+    <span class="num">3.6.</span> Modelo de datos y seguridad
+  </h2>
+
+  <p>
+    El modelo de datos prioriza la lectura del registro académico y la escritura
+    controlada de eventos. Se aplica autenticación reforzada para operaciones sensibles,
+    junto con RLS y un registro de auditoría append-only con <i>prev_hash</i> y
+    <i>hash</i>. La comunidad es cerrada y moderada, prohibiéndose la publicación de
+    contenido que promueva la venta de exámenes o de notas.
+  </p>
+
+  <h2 class="sec" data-toc="c3-7" data-level="2" data-list="general"
+      data-text="3.7. Pruebas y validación">
+    <span class="num">3.7.</span> Pruebas y validación
+  </h2>
+
+  <p>
+    La validación se realiza mediante pruebas unitarias, de integración y de usabilidad.
+    Para esta última se contempla el uso de la Escala de Usabilidad del Sistema (SUS).
+    Además, se verifica la integridad de la cadena de auditoría y el cumplimiento de
+    los permisos definidos para cada rol.
+  </p>
+
+  <h2 class="sec" data-toc="c3-8" data-level="2" data-list="general"
+      data-text="3.8. Consideraciones éticas">
+    <span class="num">3.8.</span> Consideraciones éticas
+  </h2>
+
+  <p>
+    El proyecto respeta los principios de confidencialidad, anonimización cuando
+    corresponde, minimización de datos y consentimiento informado. Todas las acciones se
+    encuentran atribuidas y auditables, garantizando la protección de la información de
+    los estudiantes y docentes involucrados.
+  </p>
+
+  <h2 class="sec" data-toc="c3-9" data-level="2" data-list="general"
+      data-text="3.9. Conclusión del capítulo">
+    <span class="num">3.9.</span> Conclusión del capítulo
+  </h2>
+
+  <p>
+    El marco metodológico presentado permite alcanzar los objetivos planteados,
+    garantizando que el diseño propuesto sea coherente con la realidad institucional, con
+    los fundamentos teóricos expuestos y con los requisitos de seguridad, integridad y
+    sostenibilidad definidos para ZAMORA.
+  </p>
+</section>
